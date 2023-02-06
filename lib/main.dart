@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:word_generator/word_generator.dart';
 
-// void main() {
-//   runApp(const MyApp());
-// }
-void main() => runApp(const MyApp());
+void main() => runApp(MyApp());
+WordGenerator _wordGenerator = WordGenerator();
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return MaterialApp(
+        title: 'heyloApp',
+        home: Scaffold(
+          appBar: AppBar(title: Text('Welcome to my first App')),
+          body: Center(child: Text(_wordGenerator.randomNoun())),
+        ));
   }
 }

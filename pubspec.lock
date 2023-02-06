@@ -184,5 +184,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.4"
+  word_generator:
+    dependency: "direct main"
+    description:
+      name: word_generator
+      sha256: "92235d7e8a8e508c1d08dca93ae1aa56c4982009313318fff3ed79194af7ff4c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.4.2"
 sdks:
   dart: ">=2.19.1 <4.0.0"
