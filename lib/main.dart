@@ -11,7 +11,20 @@ class MyApp extends StatelessWidget {
         title: 'heyloApp',
         home: Scaffold(
           appBar: AppBar(title: Text('Welcome to my first App')),
-          body: Center(child: Text(_wordGenerator.randomNoun())),
+          body: MyNameGenerator(),
         ));
+  }
+}
+
+class MyNameGenerator extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => _MyName();
+}
+
+class _MyName extends State<MyNameGenerator> {
+  @override
+  Widget build(BuildContext context) {
+    final myname = _wordGenerator.randomName();
+    return Text(myname);
   }
 }
